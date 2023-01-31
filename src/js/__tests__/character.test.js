@@ -1,0 +1,1 @@
+import Charater from '../Character';
