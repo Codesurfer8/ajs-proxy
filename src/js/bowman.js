@@ -8,5 +8,4 @@ export default class Bowman extends Charater {
   }
 }
 
-const bowman = new Bowman('Kilian');
-console.log(bowman)
+const bowman = new Bowman('Ser', 'Bowman')
