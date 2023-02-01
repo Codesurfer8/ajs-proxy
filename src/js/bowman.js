@@ -7,5 +7,3 @@ export default class Bowman extends Charater {
     this.defence = 25;
   }
 }
-
-const bowman = new Bowman('Ser', 'Bowman')

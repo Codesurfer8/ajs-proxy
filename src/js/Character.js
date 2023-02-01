@@ -16,7 +16,7 @@ export default class Character {
   }
 
   levelUp() {
-    if(this.health === 0) {
+    if (this.health === 0) {
       throw new Error('it is impossible to raise the level of the deceased');
     } else {
       this.level++;
@@ -26,10 +26,10 @@ export default class Character {
   }
 
   damage(points) {
-    if(this.health >= 0){
-      this.health -= points * (1 - this.defence / 100)
+    if (this.health >= 0) {
+      this.health -= points * (1 - this.defence / 100);
     } else {
-      throw new Error('character is dead')
+      throw new Error('character is dead');
     }
   }
 }

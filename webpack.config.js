@@ -30,7 +30,7 @@ module.exports = {
       chunkFilename: '[id].css',
     }),
     new HtmlWebPackPlugin({
-      template: './src/index.html'
+      template: './src/index.html',
     }),
   ],
 };

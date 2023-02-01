@@ -1,32 +1,26 @@
 import Bowman from '../bowman';
 
 test('creating an instance', () => {
-const bowman = new Bowman('Jed', 'Bowman');
+  const bowman = new Bowman('Jed', 'Bowman');
   const expected = {
-  name: 'Jed',
+    name: 'Jed',
     type: 'Bowman',
     health: 100,
     level: 1,
     attack: 25,
-    defence: 25
-}
+    defence: 25,
+  };
 
-expect(bowman).toEqual(expected)
-
-})
+  expect(bowman).toEqual(expected);
+});
 
 test('fidelity of character type input', () => {
-   
+  expect(() => { const bowman = new Bowman('Jed', ''); }).toThrow('Type not found');
+});
 
+test('number of characters in the name', () => { 
     expect(() => {
-        const bowman = new Bowman('Jed', '');
-    }).toThrow('Type not found')
-})
-
-test('number of characters in the name', () => {
-    
-    expect(() => {
-        const bowman = new Bowman('Y', 'Bowman');
+const bowman = new Bowman('Y', 'Bowman');
     }).toThrow('Name character must be > 2 and < 10 symbol')
 })
 
