@@ -12,7 +12,6 @@ test('number of characters in the name', () => {
   }).toThrow('Name character must be > 2 and < 10 symbol');
 });
 
-
 test('test of method - levelUp, when health = 0', () => {
   const ch = new Character('Bull', 'Bowman');
   ch.health = 0;

@@ -1,4 +1,4 @@
-export default class Character {
+class Character {
   constructor(name, type) {
     if (name.length < 2 || name.length > 10) {
       throw new Error('Name character must be > 2 and < 10 symbol');
@@ -33,3 +33,5 @@ export default class Character {
     }
   }
 }
+
+export default Character;

@@ -6,6 +6,7 @@
      "jest": true
   },
   "rules": {
+    "no-plusplus": "error",
     "linebreak-style": ["error", "windows"],
     "no-restricted-syntax": [
       "error",
