@@ -14,6 +14,20 @@ test('creating an instance', () => {
   expect(daemon).toEqual(expected);
 });
 
+test('creating an instance without type', () => {
+  const daemon = new Daemon('Kratos');
+  const expected = {
+    name: 'Kratos',
+    type: 'Daemon',
+    health: 100,
+    level: 1,
+    attack: 10,
+    defence: 40,
+  };
+
+  expect(daemon).toEqual(expected);
+});
+
 test('fidelity of character type input', () => {
   expect(() => {
     const daemon = new Daemon('Kratos', '');

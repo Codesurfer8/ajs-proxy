@@ -14,6 +14,20 @@ test('creating an instance', () => {
   expect(bowman).toEqual(expected);
 });
 
+test('creating an instance without type', () => {
+  const bowman = new Bowman('Jed');
+  const expected = {
+    name: 'Jed',
+    type: 'Bowman',
+    health: 100,
+    level: 1,
+    attack: 25,
+    defence: 25,
+  };
+
+  expect(bowman).toEqual(expected);
+});
+
 test('fidelity of character type input', () => {
   expect(() => { const bowman = new Bowman('Jed', ''); }).toThrow('Type not found');
 });

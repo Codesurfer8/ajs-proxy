@@ -14,6 +14,20 @@ test('creating an instance', () => {
   expect(undead).toEqual(expected);
 });
 
+test('creating an instance without type', () => {
+  const undead = new Undead('Dead');
+  const expected = {
+    name: 'Dead',
+    type: 'Undead',
+    health: 100,
+    level: 1,
+    attack: 25,
+    defence: 25,
+  };
+
+  expect(undead).toEqual(expected);
+});
+
 test('fidelity of character type input', () => {
   expect(() => {
     const undead = new Undead('Dead', '');

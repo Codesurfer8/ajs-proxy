@@ -14,6 +14,20 @@ test('creating an instance', () => {
   expect(swordsman).toEqual(expected);
 });
 
+test('creating an instance without type', () => {
+  const swordsman = new Swordsman('King');
+  const expected = {
+    name: 'King',
+    type: 'Swordsman',
+    health: 100,
+    level: 1,
+    attack: 40,
+    defence: 10,
+  };
+
+  expect(swordsman).toEqual(expected);
+});
+
 test('fidelity of character type input', () => {
   expect(() => {
     const swordsman = new Swordsman('King', '');
