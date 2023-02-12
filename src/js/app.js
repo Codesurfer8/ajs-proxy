@@ -6,17 +6,21 @@ export default function orderByProps(data, [key1, key2]) {
   const array = [];
   const array2 = [];
   for (const key in data) {
-    if (key === key1 || key === key2) {
-      array.push({ key, value: data[key] });
-    }
+    if (Object.prototype.hasOwnProperty.call(data, key)) {
+      if (key === key1 || key === key2) {
+        array.push({ key, value: data[key] });
+      }
 
-    if (key !== key1 && key !== key2) {
-      array2.push({ key, value: data[key] });
-      array2.sort((a, b) => {
-        if (a.key < b.key) {
-          return -1;
-        }
-      });
+      if (key !== key1 && key !== key2) {
+        array2.push({ key, value: data[key] });
+        array2.sort((a, b) => {
+          if (a.key < b.key) {
+            return -1;
+          }
+
+          return null;
+        });
+      }
     }
   }
   const keys = array.concat(array2);
