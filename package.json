@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "serve": "live-server src",
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production",
     "lint": "eslint .",
